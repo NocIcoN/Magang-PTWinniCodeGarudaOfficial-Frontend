@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Navbar from './Navbar';
+import NavbarAdmin from './NavbarAdmin';
 import Footer from './Footer';
 
 function ManageUsers() {
@@ -14,7 +14,7 @@ function ManageUsers() {
 
     return (
         <div>
-            <Navbar />
+            <NavbarAdmin />
             <div style={styles.container}>
                 <h2>Kelola Pengguna</h2>
                 <ul>
@@ -31,7 +31,9 @@ function ManageUsers() {
 const styles = {
     container: {
         padding: '20px',
-        textAlign: 'left'
+        textAlign: 'left',
+        backgroundColor: '#f5f5f5',
+        minHeight: '100vh'
     }
 };
 

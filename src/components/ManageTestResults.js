@@ -3,23 +3,23 @@ import axios from 'axios';
 import NavbarAdmin from './NavbarAdmin';
 import Footer from './Footer';
 
-function ManageContent() {
-    const [content, setContent] = useState([]);
+function ManageTestResults() {
+    const [results, setResults] = useState([]);
 
     useEffect(() => {
-        axios.get('/api/manage-content')
-            .then(response => setContent(response.data))
-            .catch(error => console.error('Error fetching content:', error));
+        axios.get('/api/test-results')
+            .then(response => setResults(response.data))
+            .catch(error => console.error('Error fetching test results:', error));
     }, []);
 
     return (
         <div>
             <NavbarAdmin />
             <div style={styles.container}>
-                <h2>Kelola Konten TOEFL</h2>
+                <h2>Kelola Hasil Tes</h2>
                 <ul>
-                    {content.map(item => (
-                        <li key={item.id}>{item.title}</li>
+                    {results.map(result => (
+                        <li key={result.id}>{result.studentName} - Score: {result.score}</li>
                     ))}
                 </ul>
             </div>
@@ -37,4 +37,4 @@ const styles = {
     }
 };
 
-export default ManageContent;
+export default ManageTestResults;

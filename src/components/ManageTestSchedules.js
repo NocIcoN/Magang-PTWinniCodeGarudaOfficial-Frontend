@@ -3,23 +3,23 @@ import axios from 'axios';
 import NavbarAdmin from './NavbarAdmin';
 import Footer from './Footer';
 
-function ManageContent() {
-    const [content, setContent] = useState([]);
+function ManageTestSchedules() {
+    const [schedules, setSchedules] = useState([]);
 
     useEffect(() => {
-        axios.get('/api/manage-content')
-            .then(response => setContent(response.data))
-            .catch(error => console.error('Error fetching content:', error));
+        axios.get('/api/test-schedules')
+            .then(response => setSchedules(response.data))
+            .catch(error => console.error('Error fetching test schedules:', error));
     }, []);
 
     return (
         <div>
             <NavbarAdmin />
             <div style={styles.container}>
-                <h2>Kelola Konten TOEFL</h2>
+                <h2>Kelola Jadwal Tes</h2>
                 <ul>
-                    {content.map(item => (
-                        <li key={item.id}>{item.title}</li>
+                    {schedules.map(schedule => (
+                        <li key={schedule.id}>{schedule.date} - {schedule.description}</li>
                     ))}
                 </ul>
             </div>
@@ -37,4 +37,4 @@ const styles = {
     }
 };
 
-export default ManageContent;
+export default ManageTestSchedules;

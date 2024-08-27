@@ -6,7 +6,7 @@ function Logout() {
 
     const handleLogout = () => {
         // Implementasi logout, misalnya hapus token atau sesi
-        navigate('/'); // Redirect ke halaman login
+        navigate('/'); 
     };
 
     return (

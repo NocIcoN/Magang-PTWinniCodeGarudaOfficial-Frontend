@@ -11,7 +11,11 @@ import Certificate from './components/Certificate';
 import AdminReport from './components/AdminReport';
 import ManageUsers from './components/ManageUsers';
 import ManageContent from './components/ManageContent';
+import ManageTestSchedules from './components/ManageTestSchedules';
+import ManageTestResults from './components/ManageTestResults';
 import Profile from './components/Profile';
+import Login from './components/Login';
+import Register from './components/Register';
 import Logout from './components/Logout';
 
 function App() {
@@ -27,7 +31,7 @@ function App() {
           <Route path="/profile" element={<Profile />} />
 
           {/* Dashboard Admin */}
-          <Route path="/admin-dashboard" element={<AdminDashboard />} />
+          <Route path="/admin" element={<AdminDashboard />} />
 
           {/* Halaman Informasi Tes */}
           <Route path="/test-info" element={<TestInfo />} />
@@ -55,6 +59,18 @@ function App() {
 
           {/* Halaman Kelola Konten (Admin Only) */}
           <Route path="/manage-content" element={<ManageContent />} />
+
+          {/* Halaman Kelola Jadwal Tes (Admin Only) */}
+          <Route path="/manage-test-schedules" element={<ManageTestSchedules />} />
+
+          {/* Halaman Kelola Hasil Tes (Admin Only) */}
+          <Route path="/manage-test-results" element={<ManageTestResults />} />
+
+          {/* Login */}
+          <Route path="/login" element={<Login />} />
+          
+          {/* Registrasi */}
+          <Route path="/register" element={<Register />} />
 
           {/* Logout */}
           <Route path="/logout" element={<Logout />} />

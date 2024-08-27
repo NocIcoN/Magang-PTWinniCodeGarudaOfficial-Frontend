@@ -1,0 +1,38 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #343a40;
+    color: #fff;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.dashboard-menu {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+.dashboard-menu li {
+    margin: 0 10px;
+}
+
+.dashboard-menu li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+}
+
+.dashboard-menu li a:hover {
+    background-color: #495057;
+}
